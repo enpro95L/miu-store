@@ -3,6 +3,7 @@ package com.powersoft.miustore
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.util.Patterns
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
@@ -94,7 +95,7 @@ class LoginActivity : AppCompatActivity() {
             binding.etEmail.error = "Email is required!!"
             binding.etEmail.requestFocus()
             return false
-        } else if (!binding.etEmail.text.contains("@")) {
+        } else if (!Patterns.EMAIL_ADDRESS.matcher(binding.etEmail.text).matches()) {
             binding.etEmail.error = "Invalid email address!!"
             binding.etEmail.requestFocus()
             return false
