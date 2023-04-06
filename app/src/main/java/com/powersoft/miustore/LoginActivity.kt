@@ -59,17 +59,18 @@ class LoginActivity : AppCompatActivity() {
                 binding.etEmail.requestFocus()
                 return@setOnClickListener
             }
+
             val email = binding.etEmail.text.toString()
 
             val intent = Intent()
             intent.action = Intent.ACTION_SENDTO
             intent.data = Uri.parse("mailto:")
             intent.putExtra(Intent.EXTRA_EMAIL, arrayOf(email))
-            intent.putExtra(Intent.EXTRA_SUBJECT, "Forgot Password");
+            intent.putExtra(Intent.EXTRA_SUBJECT, "Forgot Password")
             intent.putExtra(Intent.EXTRA_TEXT, "Your Password is ${getPasswordFromEmail(email)}")
 
             if (intent.resolveActivity(packageManager) != null) {
-                startActivity(intent);
+                startActivity(intent)
             } else {
                 Toast.makeText(this, "No application found for email.", Toast.LENGTH_SHORT).show()
             }
@@ -77,13 +78,13 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun getPasswordFromEmail(email: String): String? {
-        userList.forEach { if (it.email.equals(email)) return it.password }
+        userList.forEach { if (it.email == email) return it.password }
         return null
     }
 
     private fun checkIfUserExist(user: User): Boolean {
         userList.forEach {
-            if (it.email.equals(user.email) && it.password.equals(user.password)) return true
+            if (it.email == user.email && it.password == user.password) return true
         }
         return false
     }
