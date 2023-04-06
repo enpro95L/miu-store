@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/tvFirstNumber"
+        style="@style/MyTextView.Medium"
+        android:text="@string/first_number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etFirstNumber"
+        style="@style/MyEditText.Medium"
+        android:layout_marginTop="10dp"
+        android:autofillHints="@null"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvFirstNumber"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/tvSecondNumber"
+        style="@style/MyTextView.Medium"
+        android:layout_marginTop="20dp"
+        android:text="@string/second_number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etFirstNumber" />
+
+    <EditText
+        android:id="@+id/etSecondNumber"
+        style="@style/MyEditText.Medium"
+        android:layout_marginTop="10dp"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSecondNumber"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/tvResult"
+        style="@style/MyTextView.XLarge"
+        android:layout_marginTop="20dp"
+        android:text="Result: 00"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etSecondNumber"
+        tools:ignore="HardcodedText" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvResult">
+
+        <Button
+            android:id="@+id/btnAdd"
+            style="@style/MyButton"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/drawable_edittext"
+            android:text="@string/symbol_add"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btnSub"
+            style="@style/MyButton"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/drawable_edittext"
+            android:text="@string/symbol_minus"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btnMul"
+            style="@style/MyButton"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/drawable_edittext"
+            android:text="@string/symbol_multiply"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btnDiv"
+            style="@style/MyButton"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/drawable_edittext"
+            android:text="@string/symbol_divide"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

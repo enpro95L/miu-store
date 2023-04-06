@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:padding="24dp">
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:contentDescription="@null"
+        android:src="@drawable/miu_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvLabel"
+        style="@style/MyTextView.XLarge"
+        android:layout_marginTop="20dp"
+        android:text="@string/create_your_account"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgLogo" />
+
+    <TextView
+        android:id="@+id/tvRequiredField"
+        style="@style/MyTextView.Medium"
+        android:layout_marginTop="20dp"
+        android:text="@string/required_field"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvLabel" />
+
+    <TextView
+        android:id="@+id/tvFirstName"
+        style="@style/MyTextView.Medium"
+        android:layout_marginTop="20dp"
+        android:text="@string/first_name_asterisk"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvRequiredField" />
+
+    <EditText
+        android:id="@+id/etFirstName"
+        style="@style/MyEditText.Medium"
+        android:layout_height="45dp"
+        android:layout_marginTop="8dp"
+        android:autofillHints="none"
+        android:background="@drawable/drawable_edittext"
+        android:hint="@string/first_name"
+        android:inputType="textPersonName"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvFirstName" />
+
+    <TextView
+        android:id="@+id/tvLastName"
+        style="@style/MyTextView.Medium"
+        android:layout_marginTop="10dp"
+        android:text="@string/last_name_asterisk"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etFirstName" />
+
+    <EditText
+        android:id="@+id/etLastName"
+        style="@style/MyEditText.Medium"
+        android:layout_height="45dp"
+        android:layout_marginTop="10dp"
+        android:autofillHints="none"
+        android:background="@drawable/drawable_edittext"
+        android:hint="@string/last_name"
+        android:inputType="textPersonName"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvLastName" />
+
+    <TextView
+        android:id="@+id/tvEmail"
+        style="@style/MyTextView.Medium"
+        android:layout_marginTop="10dp"
+        android:text="@string/email_address_asterisk"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etLastName" />
+
+    <EditText
+        android:id="@+id/etEmail"
+        style="@style/MyEditText.Medium"
+        android:layout_height="45dp"
+        android:layout_marginTop="10dp"
+        android:autofillHints="none"
+        android:background="@drawable/drawable_edittext"
+        android:hint="@string/email_address"
+        android:inputType="textEmailAddress"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvEmail" />
+
+    <TextView
+        android:id="@+id/tvPassword"
+        style="@style/MyTextView.Medium"
+        android:layout_marginTop="10dp"
+        android:text="@string/password_asterisk"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etEmail" />
+
+    <EditText
+        android:id="@+id/etPassword"
+        style="@style/MyEditText.Medium"
+        android:layout_height="45dp"
+        android:layout_marginTop="10dp"
+        android:autofillHints="none"
+        android:background="@drawable/drawable_edittext"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPassword" />
+
+    <Button
+        android:id="@+id/btnCreateAccount"
+        style="@style/MyButton"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/drawable_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etPassword"
+        android:text="@string/create_account" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

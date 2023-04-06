@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Color Changer</string>
+    <string name="sign_in_to_your_account">Sign in to your account</string>
+    <string name="email_address">Email Address</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot Password ?</string>
+    <string name="sign_in">Sign In</string>
+    <string name="don_t_have_an_account">Don\'t have an account ?</string>
+    <string name="create_an_account">Create a new account</string>
+    <string name="create_your_account">Create your account</string>
+    <string name="required_field">* Required Field</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="last_name_asterisk">Last Name *</string>
+    <string name="email_address_asterisk">Email Address *</string>
+    <string name="password_asterisk">Password *</string>
+    <string name="first_name_asterisk">First Name *</string>
+    <string name="create_account">Create Account</string>
+    <string name="welcome">Welcome,</string>
+    <string name="choose_your_category">Choose your Category</string>
+    <string name="first_number">First Number</string>
+    <string name="second_number">Second Number</string>
+    <string name="symbol_add">+</string>
+    <string name="symbol_minus">-</string>
+    <string name="symbol_multiply">*</string>
+    <string name="symbol_divide">/</string>
+</resources>
